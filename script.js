@@ -10,7 +10,7 @@ function handleLogin(event) {
 
     if (username === validUsername && password === validPassword) {
         alert("Zalogowano pomyślnie!");
-        window.location.href = "/html/dashboard/dashboard.html";
+        window.location.href = "/project-nihongo/html/dashboard/dashboard.html";
     } else {
         document.getElementById("loginMessage").style.display = "block";
     }
