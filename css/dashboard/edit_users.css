@@ -1,0 +1,133 @@
+/* Kontener dla edycji użytkownika */
+.edit-user-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-user-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.edit-user-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.edit-user-container label {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+.edit-user-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-user-container button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-user-container button:hover {
+    background-color: #218838;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e6f7ff;
+}
+
+/* Przyciski w tabeli */
+table button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+table button:hover {
+    background-color: #0056b3;
+}
+
+#edit-user-modal {
+    display: none;
+}
+
+/* Styl dla tabeli na urządzeniach mobilnych */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* Dodaj przewijanie poziome dla tabeli */
+        border: 0; /* Ukryj ramki dla lepszej czytelności */
+    }
+
+    table thead {
+        display: none; /* Ukryj nagłówki tabeli */
+    }
+
+    table tr {
+        display: block;
+        margin-bottom: 15px; /* Odstępy między wierszami */
+    }
+
+    table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd; /* Oddziel wiersze */
+    }
+
+    table td::before {
+        content: attr(data-label); /* Dodaj etykietę dla każdego pola */
+        flex-basis: 50%;
+        font-weight: bold;
+        color: #555;
+    }
+}

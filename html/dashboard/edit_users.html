@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edycja użytkowników</title>
+    <link rel="stylesheet" href="/css/dashboard/dashboard.css">
+</head>
+<body>
+    <section class="users">
+        <h2>Lista użytkowników</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nazwa użytkownika</th>
+                    <th>Email</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jan Kowalski</td>
+                    <td>jan.kowalski@example.com</td>
+                    <td><button onclick="editUser(1, 'Jan Kowalski', 'jan.kowalski@example.com')">Edytuj</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Anna Nowak</td>
+                    <td>anna.nowak@example.com</td>
+                    <td><button onclick="editUser(2, 'Anna Nowak', 'anna.nowak@example.com')">Edytuj</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Piotr Zieliński</td>
+                    <td>piotr.zielinski@example.com</td>
+                    <td><button onclick="editUser(3, 'Piotr Zieliński', 'piotr.zielinski@example.com')">Edytuj</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Formularz edycji użytkownika -->
+    <div class="edit-user-container" id="edit-user-modal">
+        <h1>Edycja Użytkownika</h1>
+        <form onsubmit="saveChanges(event)">
+            <label for="first-name">Imię i nazwisko</label>
+            <input type="text" id="first-name" name="first-name" value="">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" value="">
+
+            <button type="submit">Zapisz zmiany</button>
+            <button type="button" onclick="closeModal()">Anuluj</button>
+        </form>
+    </div>
+
+    <button onclick="window.location.href='dashboard.html'" class="back-button">Powrót do Dashboardu</button>
+
+    <script>
+        // Funkcja do pokazania formularza edycji i wypełnienia go danymi
+        function editUser(id, name, email) {
+            document.getElementById('edit-user-modal').style.display = 'block';
+            document.getElementById('first-name').value = name;
+            document.getElementById('email').value = email;
+        }
+
+        // Funkcja do zapisania zmian (symulacja)
+        function saveChanges(event) {
+            event.preventDefault();
+            alert('Zmiany zostały zapisane.');
+            closeModal();
+        }
+
+        // Funkcja do zamknięcia formularza
+        function closeModal() {
+            document.getElementById('edit-user-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

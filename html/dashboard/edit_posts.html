@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/dashboard/dashboard.css">
+    <title>Edycja Postów</title>
+</head>
+<body>
+    <div class="dashboard-header">
+        <h1>Edycja Postów</h1>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="post" id="post-1">
+            <h2>Najlepszy sposób na poznanie życia w Japonii</h2>
+            <p>Jeżeli lubicie słuchać podcasty, to z pewnością powinniście zajrzeć na kanał Abroad In Japan. Podróżnik Chris Broad oraz radiowy prezenter Pete Donaldson wprowadzą was w szczegóły życia w Japonii, podpowiedzą jakie miejsca warto odwiedzić, czego unikać i jak przygotować się do odwiedzenia kraju wschodzącego słońca.</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7JhqG8vTdpZQsqXiMFKTR0?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <button class="edit-btn" onclick="enableEditing(1)">Edytuj</button>
+        </div>
+
+        <div class="post" id="post-2">
+            <h2>Zapoznaj się z tym kanałem</h2>
+            <p>W internecie istnieje wiele różnych poradników, które pomagają wprowadzić osoby zainteresowane do języka japońskiego, jednakże jeden kanał wyróżnia się spośród innych. Japanese Ammo with Misa, to idealny kanał jeżeli chcemy zacząć naukę od podstaw, aż do poziomu średniego. Przystępny format filmów z dobrymi wizualiami zapewnia idealną paczkę do nauki.</p>
+            <iframe class="youtube-iframe" src="https://www.youtube.com/embed/UneYOL0DQxk" title="#1 は &amp; です Japanese Grammar Lesson for Absolute Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button class="edit-btn" onclick="enableEditing(2)">Edytuj</button>
+        </div>
+
+        <div class="post" id="post-3">
+            <h2>Tego nie rób!</h2>
+            <p>Istnieje wiele różnych książek, które twierdzą, że nauczą ciebie japońskiego. Przed zakupem takiej książki zachęcamy do zapoznania się z tym filmem w którym autor przedstawia jak tak na prawdę powinniśmy podejść do nauki języka samurajów.</p>
+            <iframe class="youtube-iframe" src="https://www.youtube.com/embed/caQQRs-hDf0" title="How to Learn Japanese" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <button class="edit-btn" onclick="enableEditing(3)">Edytuj</button>
+        </div>
+        <button onclick="window.location.href='dashboard.html'" class="back-button">Powrót do Dashboardu</button>
+    </div>
+
+    <script>
+        function enableEditing(postId) {
+            const post = document.getElementById(`post-${postId}`);
+            const title = post.querySelector('h2').innerText;
+            const content = post.querySelector('p').innerText;
+            const imgSrc = post.querySelector('iframe, img')?.src || '';
+
+            post.innerHTML = `
+                <div class="edit-area">
+                    <label>Tytuł:</label>
+                    <input type="text" value="${title}">
+                    <label>Treść:</label>
+                    <textarea rows="5">${content}</textarea>
+                    ${imgSrc ? `<label>Multimedia:</label><input type="text" value="${imgSrc}">` : ''}
+                    <button class="edit-btn" onclick="cancelEdit(${postId})">Anuluj</button>
+                    <button class="edit-btn" onclick="fakeSave(${postId})">Zapisz</button>
+                </div>
+            `;
+        }
+
+        function cancelEdit(postId) {
+            alert('Edycja anulowana. Powrót do widoku posta.');
+            location.reload(); // Symulacja powrotu do stanu początkowego.
+        }
+
+        function fakeSave(postId) {
+            alert('Zapisano zmiany');
+            location.reload(); // Symulacja zakończenia edycji.
+        }
+    </script>
+</body>
+</html>

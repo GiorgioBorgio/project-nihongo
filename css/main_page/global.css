@@ -1,0 +1,134 @@
+body,html {
+    background-image: url(/images/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* =============================================
+   LOGO, NAZWA, MOTTO
+   ============================================= */
+.header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+.header img {
+    max-width: 150px;
+    height: auto; 
+}
+
+/* =============================================
+   PASEK NAWIGACJI
+   ============================================= */
+.topnav {
+    display: flex; 
+    position: static;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #333;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topnav a {
+    opacity: 0.5;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: hotpink;
+    color: white;
+    opacity: 1;
+}
+/* =============================================
+   LOGOWANIE
+   ============================================= */
+.login {
+    margin-left: auto; 
+    opacity: 0.7;
+}
+
+.login:hover {
+    background-color: hotpink;
+    color: white;
+    opacity: 1;
+}
+/* =============================================
+   GŁÓWNA ZAWARTOŚĆ
+   ============================================= */
+.column {
+    text-align: center;
+    padding: 10px;
+}
+
+.column.middle {
+    font-size: 20px;
+    color: white;
+    background: rgba(105, 105, 105, 0.8);
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column.middle img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.footer {
+    margin-top: auto;
+    background: rgba(255, 105, 180, 0.2);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    width: 100%; 
+}
+
+.more {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+table {
+    text-align: center;
+    background-color:rgba(0,0,0, 0.5);
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    background-color: #333;
+    color: white;
+}
+iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.youtube-iframe {
+    width: 90%; /* Szerokość większa dla filmików YouTube */
+    max-width: 1200px; /* Maksymalna szerokość */
+    margin: 0 auto; /* Wycentrowanie */
+    display: block; /* Wyświetlanie jako blok */
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edycja Profilu</title>
+    <link rel="stylesheet" href="/css/dashboard/dashboard.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Edycja Profilu</h1>
+        <!-- Zdjęcie profilowe -->
+        <div class="profile-picture">
+            <img id="profile-picture-preview" src="/images/profil.gif" alt="Zdjęcie profilowe">
+        </div>
+        <form class="profile-form" onsubmit="saveChanges(event)">
+            <label for="profile-first-name">Imię</label>
+            <input type="text" id="profile-first-name" name="profile-first-name" value="Miłosz" required>
+
+            <label for="profile-last-name">Nazwisko</label>
+            <input type="text" id="profile-last-name" name="profile-last-name" value="Pietrzak-Gacek" required>
+
+            <label for="profile-email">E-mail</label>
+            <input type="email" id="profile-email" name="profile-email" value="miloszpietrzakgacek@mail.com" required>
+
+            <label for="profile-phone">Telefon</label>
+            <input type="tel" id="profile-phone" name="profile-phone" value="123456789" pattern="[0-9]{9}" required>
+
+            <label for="profile-photo">Zdjęcie</label>
+            <input type="file" id="profile-photo" name="profile-photo" accept="image/*" onchange="previewPhoto(event)">
+
+            <label for="profile-bio">Krótka notatka bio</label>
+            <textarea id="profile-bio" name="profile-bio" rows="5">Założyciel portalu</textarea>
+
+            <button type="submit">Zapisz zmiany</button>
+        </form>
+        <button onclick="window.location.href='dashboard.html'" class="back-button">Powrót do Dashboardu</button>
+    </div>
+
+    <script>
+        function previewPhoto(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('profile-picture-preview');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = 'profile.jpg'; // Domyślne zdjęcie
+            }
+        }
+
+        function saveChanges(event) {
+            event.preventDefault();
+            alert('Zmiany zostały zapisane (symulacja).');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+/* Styl formularza */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.profile-form label {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+.profile-form input,
+.profile-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profile-form textarea {
+    resize: none;
+}
+
+.profile-form input[type="file"] {
+    padding: 5px;
+    border: none;
+}
+
+/* Styl przycisku */
+.profile-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-form button:hover {
+    background-color: #218838;
+}
+/* Zdjęcie profilowe */
+.profile-picture {
+    margin-bottom: 20px;
+}
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007BFF;
+    margin-bottom: 20px;
+}

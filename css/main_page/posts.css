@@ -1,0 +1,36 @@
+/* =============================================
+   OGŁOSZENIA/POSTY
+   ============================================= */
+   .post {
+    background: linear-gradient(to bottom, #f9f4ef, #e2d4c3);
+    color: #333;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 1px solid #c4a484;
+}
+
+.post h2 {
+    color: #b45309;
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 2px solid #e2d4c3;
+    padding-bottom: 10px;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.post p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.post img {
+    margin-top: 10px;
+    max-width: 100%;
+    border: 3px solid #b45309;
+    border-radius: 5px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="/images/torii-gate.png"/>
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="/css/main_page/style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="/images/logo.png" alt="Logo strony">
+        <h1>日本語</h1>
+        <p><strong>新しい言語は、新たな人生の始まり。</strong></p>
+        <p><i>Atarashii gengo wa arata na jinsei no hajimari.</i></p>
+        <p><em>A new language is a new life.</em></p>
+    </div>
+    <div class="topnav">
+        <a href="index.html">Strona główna</a>
+        <a href="przydatne_materialy.html">Przydatne materiały</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="pierwsze_kroki.html">Pierwsze kroki</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="info.html">Informacje</a>
+        <a class="login" href="login.html"> Zaloguj się</a>
+    </div>
+    <div class="login-page">
+        <div class="login-container">
+            <h2>Logowanie</h2>
+            <form id="loginForm">
+                <label for="username">Nazwa użytkownika:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Zaloguj się</button>
+            </form>
+            <p id="loginMessage" style="color: red; display: none; font-size:large; font-weight: bold;">Niepoprawne dane logowania!</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© Miłosz Pietrzak-Gacek</p>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

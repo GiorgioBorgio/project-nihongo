@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="shortcut icon" type="image/jpg" href="/images/torii-gate.png">
+    <link rel="stylesheet" href="/css/main_page/style.css">
+    <title>Kontakt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="header">
+    <img src="/images/logo.png">
+    <h1>日本語</h1>
+    <p>新しい言語は、新たな人生の始まり。</p>
+    <p>Atarashii gengo wa arata na jinsei no hajimari.</p>
+    <p>A new language is a new life.</p>
+</div>
+
+<div class="topnav">
+    <a href="index.html">Strona główna</a>
+    <a href="przydatne_materialy.html">Przydatne materiały</a>
+    <a href="galeria.html">Galeria</a>
+    <a href="pierwsze_kroki.html">Pierwsze kroki</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="info.html">Informacje</a>
+    <a class="login" href="login.html"> Zaloguj się</a>
+</div>
+<div class="container">
+    <form id="contactForm">
+      <label for="fname">Imię</label>
+      <input type="text" id="fname" name="firstname" placeholder="Twoję imię" required>
+  
+      <label for="lname">Nazwisko</label>
+      <input type="text" id="lname" name="lastname" placeholder="Twoje nazwisko" required>
+
+      <label for="email">Adres e-mail</label>
+      <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail" required>
+
+      <label for="phone">Numer telefonu</label>
+      <input type="tel" id="phone" name="phone" placeholder="Wpisz swój numer telefonu" pattern="[0-9]{9,12}" required>
+
+      <label for="lesson-type">Rodzaj lekcji</label>
+      <select id="lesson-type" name="lesson-type" required>
+          <option value="indywidualne">Indywidualne</option>
+          <option value="group">Stacjonarne w grupie</option>
+          <option value="online">Online</option>         
+      </select>
+      <label for="level">Poziom zaawansowania</label>
+      <select id="level" name="level" required>
+          <option value="początkujący">Początkujący</option>
+          <option value="średnio-zaawansowany">Średnio zaawansowany</option>
+          <option value="zaawansowany">Zaawansowany</option>
+      </select>
+      <label for="availability">Preferowany czas lekcji</label>
+      <input type="text" id="availability" name="availability" placeholder="Np. wieczory w tygodniu">
+
+      <label for="subject">Dodatkowe informacje</label>
+      <textarea id="subject" name="subject" placeholder="Opisz swoje oczekiwania lub pytania" style="height:200px"></textarea>
+      
+      <input type="submit" value="Wyślij">
+    </form>
+</div> 
+<div class="footer">
+    <p>&copy; Miłosz Pietrzak-Gacek</p>
+</div>
+<script src="/script.js"></script>
+</body>
+</html>
